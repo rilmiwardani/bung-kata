@@ -219,7 +219,7 @@ export default function App() {
   useEffect(() => {
     let ws; let reconnectTimer;
     const connectWebSocket = () => {
-      const wsUrl = `ws://${wsHost}:62024`;
+      const wsUrl = `ws://localhost:62024`;
       ws = new WebSocket(wsUrl);
       ws.onopen = function () { setSocketStatus("CONNECTED"); };
       ws.onmessage = function (event) {
@@ -978,4 +978,5 @@ export default function App() {
       `}</style>
     </div>
   );
+
 }
